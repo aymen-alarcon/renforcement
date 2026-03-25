@@ -100,180 +100,180 @@
 
 // Challenge 2
 
-let stockIngredients = [
-  {
-    "nom": "Pommes de terre",
-    "quantite": 8.2,
-    "unite": "kg",
-    "prix_unitaire": 1.2,
-    "seuil_alerte": 10,
-    "categorie": "légume",
-  },
-  {
-    "nom": "Carottes",
-    "quantite": 4.5,
-    "unite": "kg",
-    "prix_unitaire": 1.5,
-    "seuil_alerte": 5,
-    "categorie": "légume",
-  },
-  {
-    "nom": "Tomates",
-    "quantite": 12.0,
-    "unite": "kg",
-    "prix_unitaire": 3.8,
-    "seuil_alerte": 8,
-    "categorie": "légume",
-  },
-  {
-    "nom": "Boeuf haché",
-    "quantite": 3.8,
-    "unite": "kg",
-    "prix_unitaire": 12.5,
-    "seuil_alerte": 5,
-    "categorie": "viande",
-  },
-  {
-    "nom": "Poulet",
-    "quantite": 15.0,
-    "unite": "kg",
-    "prix_unitaire": 8.9,
-    "seuil_alerte": 10,
-    "categorie": "viande",
-  },
-  {
-    "nom": "Saumon",
-    "quantite": 2.1,
-    "unite": "kg",
-    "prix_unitaire": 22.0,
-    "seuil_alerte": 4,
-    "categorie": "viande",
-  },
-  {
-    "nom": "Sel",
-    "quantite": 1.2,
-    "unite": "kg",
-    "prix_unitaire": 0.8,
-    "seuil_alerte": 2,
-    "categorie": "épice",
-  },
-  {
-    "nom": "Poivre",
-    "quantite": 0.8,
-    "unite": "kg",
-    "prix_unitaire": 15.0,
-    "seuil_alerte": 1,
-    "categorie": "épice",
-  },
-  {
-    "nom": "Curcuma",
-    "quantite": 2.5,
-    "unite": "kg",
-    "prix_unitaire": 18.5,
-    "seuil_alerte": 0.5,
-    "categorie": "épice",
-  },
-  {
-    "nom": "Huile olive",
-    "quantite": 18.0,
-    "unite": "litres",
-    "prix_unitaire": 6.5,
-    "seuil_alerte": 20,
-    "categorie": "boisson",
-  },
-  {
-    "nom": "Eau",
-    "quantite": 35.0,
-    "unite": "litres",
-    "prix_unitaire": 0.4,
-    "seuil_alerte": 50,
-    "categorie": "boisson",
-  },
-  {
-    "nom": "Vin rouge",
-    "quantite": 12.5,
-    "unite": "litres",
-    "prix_unitaire": 9.2,
-    "seuil_alerte": 15,
-    "categorie": "boisson",
-  },
-];
-
-let total = 0
-let totalQuantityByCategory = 0
-
-stockIngredients.forEach(ingredient => {
-    total = ingredient.prix_unitaire * ingredient.quantite
-    console.log(total);    
-});
-let grouped = Object.groupBy(stockIngredients, ({categorie}) => categorie)
-
-let stockByCategory = Object.entries(grouped).map(([categorie, items]) =>({
-    categorie,
-    stock: items.reduce((sum, items) => sum + items.quantite, 0) 
-}))
-console.log(stockByCategory);
-
-//Challenge 3
-
-// let equipes = [
-//     { 
-//         "nom": "PSG", 
-//         "points": 75, 
-//         "buts_pour": 85, 
-//         "buts_contre": 25, 
-//         "matchs_joues": 30 
-//     },
-//     {
-//         "nom": "Real Madrid",
-//         "points": 80,
-//         "buts_pour": 78,
-//         "buts_contre": 20,
-//         "matchs_joues": 30,
-//     },
-//     {
-//         "nom": "Bayern Munich",
-//         "points": 65,
-//         "buts_pour": 72,
-//         "buts_contre": 35,
-//         "matchs_joues": 30,
-//     },
-//     {
-//         "nom": "Man City",
-//         "points": 60,
-//         "buts_pour": 68,
-//         "buts_contre": 28,
-//         "matchs_joues": 30,
-//     },
-//     {
-//         "nom": "Liverpool",
-//         "points": 55,
-//         "buts_pour": 62,
-//         "buts_contre": 40,
-//         "matchs_joues": 30,
-//     },
-//     {
-//         "nom": "Juventus",
-//         "points": 45,
-//         "buts_pour": 50,
-//         "buts_contre": 45,
-//         "matchs_joues": 30,
-//     },
-//     {
-//         "nom": "Barcelona",
-//         "points": 40,
-//         "buts_pour": 55,
-//         "buts_contre": 55,
-//         "matchs_joues": 30,
-//     },
-//     { 
-//         "nom": "Ajax", 
-//         "points": 35, 
-//         "buts_pour": 48, 
-//         "buts_contre": 50, 
-//         "matchs_joues": 30 
-//     },
+// let stockIngredients = [
+//   {
+//     "nom": "Pommes de terre",
+//     "quantite": 8.2,
+//     "unite": "kg",
+//     "prix_unitaire": 1.2,
+//     "seuil_alerte": 10,
+//     "categorie": "légume",
+//   },
+//   {
+//     "nom": "Carottes",
+//     "quantite": 4.5,
+//     "unite": "kg",
+//     "prix_unitaire": 1.5,
+//     "seuil_alerte": 5,
+//     "categorie": "légume",
+//   },
+//   {
+//     "nom": "Tomates",
+//     "quantite": 12.0,
+//     "unite": "kg",
+//     "prix_unitaire": 3.8,
+//     "seuil_alerte": 8,
+//     "categorie": "légume",
+//   },
+//   {
+//     "nom": "Boeuf haché",
+//     "quantite": 3.8,
+//     "unite": "kg",
+//     "prix_unitaire": 12.5,
+//     "seuil_alerte": 5,
+//     "categorie": "viande",
+//   },
+//   {
+//     "nom": "Poulet",
+//     "quantite": 15.0,
+//     "unite": "kg",
+//     "prix_unitaire": 8.9,
+//     "seuil_alerte": 10,
+//     "categorie": "viande",
+//   },
+//   {
+//     "nom": "Saumon",
+//     "quantite": 2.1,
+//     "unite": "kg",
+//     "prix_unitaire": 22.0,
+//     "seuil_alerte": 4,
+//     "categorie": "viande",
+//   },
+//   {
+//     "nom": "Sel",
+//     "quantite": 1.2,
+//     "unite": "kg",
+//     "prix_unitaire": 0.8,
+//     "seuil_alerte": 2,
+//     "categorie": "épice",
+//   },
+//   {
+//     "nom": "Poivre",
+//     "quantite": 0.8,
+//     "unite": "kg",
+//     "prix_unitaire": 15.0,
+//     "seuil_alerte": 1,
+//     "categorie": "épice",
+//   },
+//   {
+//     "nom": "Curcuma",
+//     "quantite": 2.5,
+//     "unite": "kg",
+//     "prix_unitaire": 18.5,
+//     "seuil_alerte": 0.5,
+//     "categorie": "épice",
+//   },
+//   {
+//     "nom": "Huile olive",
+//     "quantite": 18.0,
+//     "unite": "litres",
+//     "prix_unitaire": 6.5,
+//     "seuil_alerte": 20,
+//     "categorie": "boisson",
+//   },
+//   {
+//     "nom": "Eau",
+//     "quantite": 35.0,
+//     "unite": "litres",
+//     "prix_unitaire": 0.4,
+//     "seuil_alerte": 50,
+//     "categorie": "boisson",
+//   },
+//   {
+//     "nom": "Vin rouge",
+//     "quantite": 12.5,
+//     "unite": "litres",
+//     "prix_unitaire": 9.2,
+//     "seuil_alerte": 15,
+//     "categorie": "boisson",
+//   },
 // ];
+
+// let total = 0
+// let totalQuantityByCategory = 0
+
+// stockIngredients.forEach(ingredient => {
+//     total = ingredient.prix_unitaire * ingredient.quantite
+//     console.log(total);    
+// });
+// let grouped = Object.groupBy(stockIngredients, ({categorie}) => categorie)
+
+// let stockByCategory = Object.entries(grouped).map(([categorie, items]) =>({
+//     categorie,
+//     stock: items.reduce((sum, items) => sum + items.quantite, 0) 
+// }))
+// console.log(stockByCategory);
+
+// Challenge 3
+
+let equipes = [
+    { 
+        "nom": "PSG", 
+        "points": 75, 
+        "buts_pour": 85, 
+        "buts_contre": 25, 
+        "matchs_joues": 30 
+    },
+    {
+        "nom": "Real Madrid",
+        "points": 80,
+        "buts_pour": 78,
+        "buts_contre": 20,
+        "matchs_joues": 30,
+    },
+    {
+        "nom": "Bayern Munich",
+        "points": 65,
+        "buts_pour": 72,
+        "buts_contre": 35,
+        "matchs_joues": 30,
+    },
+    {
+        "nom": "Man City",
+        "points": 60,
+        "buts_pour": 68,
+        "buts_contre": 28,
+        "matchs_joues": 30,
+    },
+    {
+        "nom": "Liverpool",
+        "points": 55,
+        "buts_pour": 62,
+        "buts_contre": 40,
+        "matchs_joues": 30,
+    },
+    {
+        "nom": "Juventus",
+        "points": 45,
+        "buts_pour": 50,
+        "buts_contre": 45,
+        "matchs_joues": 30,
+    },
+    {
+        "nom": "Barcelona",
+        "points": 40,
+        "buts_pour": 55,
+        "buts_contre": 55,
+        "matchs_joues": 30,
+    },
+    { 
+        "nom": "Ajax", 
+        "points": 35, 
+        "buts_pour": 48, 
+        "buts_contre": 50, 
+        "matchs_joues": 30 
+    },
+];
 // let goalDifference = 0
 // equipes.forEach(equipe => {
 //     goalDifference = Number(equipe["buts_pour"]) - Number(equipe["buts_contre"])
@@ -283,11 +283,50 @@ console.log(stockByCategory);
 //     // console.log("the goal differnce is : " + Number(equipe["buts_pour"]) - Number(equipe["buts_contre"]));
 // });
 
-// let classementByPoints = equipes.sort((a,b) => { return a.points - b.points || a.goalDifference - b.goalDifference})
+let classementByPoints = equipes.sort((a,b) => { return a.points - b.points || a.goalDifference - b.goalDifference})
 
-// console.log(classementByPoints.reverse());
+console.log(classementByPoints.reverse());
 
 // console.log(classementByPoints);
 // classementByPoints.forEach(element => {
 //     console.log(element.nom + " — " + element.points + "pts" + " (diff:" + element.goalDifference + ")  ");
 // });
+
+function match(team1, team2, goalsByTeam1, goalsByTeam2){
+    if (goalsByTeam1 > goalsByTeam2) {
+        equipes.forEach(equipe => {
+            if (equipe.nom === team1) {
+                equipe.points += 3
+                equipe.buts_pour += goalsByTeam1
+                equipe.buts_contre += goalsByTeam2
+            }
+        });
+    }else if(goalsByTeam1 < goalsByTeam2){
+        equipes.forEach(equipe => {
+            if (equipe.nom === team2) {
+                equipe.points += 3
+                equipe.buts_pour += goalsByTeam2
+                equipe.buts_contre += goalsByTeam1
+            }
+        });
+    }else if(goalsByTeam1 === goalsByTeam2){
+        equipes.forEach(equipe => {
+            if (equipe.nom === team2) {
+                equipe.points += 1
+                equipe.buts_pour += goalsByTeam2
+                equipe.buts_contre += goalsByTeam1
+            }else if(equipe.nom === team1){
+                equipe.points += 1
+                equipe.buts_pour += goalsByTeam2
+                equipe.buts_contre += goalsByTeam1
+            }
+        });
+    }
+}
+
+match("Real Madrid", "PSG", 4, 1)
+match("Real Madrid", "Ajax", 4, 1)
+match("Real Madrid", "Barcelona", 4, 1)
+match("Real Madrid", "Juventus", 4, 1)
+match("Juventus", "PSG", 4, 1)
+console.log(classementByPoints);
